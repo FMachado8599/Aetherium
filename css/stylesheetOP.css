@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #071E3D;
+}
+
+h1 {
+  font-size: clamp(40px, 7vw, 100px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ecfaff;
+  background-color: blueviolet;
+}
+
+h2 {
+  font-size: clamp(24px, 5vw, 80px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ecfaff;
+}
+
+header {
+  height: 10svh;
+  min-height: 100px;
+  max-height: 150px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 50px;
+}
+header .logoAether {
+  width: 75px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+header nav {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  width: fit-content;
+}
+header nav a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #EEEEEE;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 50px 0px;
+}
+
+/*# sourceMappingURL=stylesheetOP.css.map */

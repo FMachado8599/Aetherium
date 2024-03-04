@@ -1,0 +1,30 @@
+header{
+    height: 10svh;
+    min-height: 100px;
+    max-height: 150px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 50px;
+    & .logoAether{
+        width: 75px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    & nav{
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        width: fit-content;
+        & a{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: #EEEEEE;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 50px 0px;
+        }
+    }
+}
