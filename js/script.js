@@ -7,46 +7,67 @@ alert(
     nombreCliente + "!" + 
     "\n \nPresiona 'Aceptar' para empezar a armar tu proxima PC");
 //------PRODUCTOS-------//
-let procesadorIntel = 290;
-let procesadorAMD = 300;
-//-------------//
-let graficaNvidia = 500;
-let graficaAMD = 490;
-//-------------//
-let ram16 = 50;
-let ram32 = 80;
+const productos = [
+    {nombre:'intel' , precio: 450, categoria:'procesador'},
+    {nombre:'amd' , precio: 490, categoria:'procesador'},
+    {nombre:'nvidia' , precio: 450, categoria:'tarjetaDeVideo'},
+    {nombre:'amd' , precio: 440, categoria:'tarjetaDeVideo'},
+    {nombre:'16' , precio: 50, categoria:'tarjetaRam'},
+    {nombre:'32' , precio: 80, categoria:'tarjetaRam'}
+]
+const carrito = [
+
+]
 
 //FUNCION COMPONENTES//
-function decision(respuesta, precio1, precio2){
+function eleccionPrecio(respuesta, precio1, precio2){
     if (respuesta ==1){
         return precio1;
     } else{
         return precio2;
     }
 }
+do{
+eleccion = prompt('Elije tu proximo procesador:\n\nIntel\no\nAMD\n\nEscribe una de las opciones').toLowerCase();
+if (eleccion == "x"){
+    break
+}else{
+}
+}while(eleccion!="intel" && eleccion!="amd");
+let productoElegido = productos.find((prod) => prod.nombre == eleccion && prod.categoria == 'procesador');
+let sumaCarrito = carrito.push(productoElegido);
 
 do{
-eleccion = prompt('Procesador:\n1: Intel\n2: AMD');
-}while(eleccion!="1" && eleccion!="2");
-let precioProcesador = decision(eleccion, procesadorIntel, procesadorAMD);
+eleccion = prompt('Ahora tu tarjeta Grafica:\n\nNvidia\no\nAMD\n\nEscribe una de las opciones').toLowerCase();
+if (eleccion == "x"){
+    break
+}else{
+}
+}while(eleccion!="nvidia" && eleccion!="amd");
+productoElegido = productos.find((prod) => prod.nombre == eleccion && prod.categoria == 'tarjetaDeVideo');
+sumaCarrito = carrito.push(productoElegido);
 
 do{
-eleccion = prompt('Tarjeta Grafica:\n1: Nvidia\n2: AMD');
-}while(eleccion!="1" && eleccion!="2");
-let precioGrafica = decision(eleccion, graficaNvidia, graficaAMD);
+eleccion = prompt('Cuantos GB quieres de RAM:\n\n16 o 32\n\nEscribe una de las opciones').toLowerCase();
+if (eleccion == "x"){
+    break
+}else{
+}
+}while(eleccion!="16" && eleccion!="32");
+productoElegido = productos.find((prod) => prod.nombre == eleccion && prod.categoria == 'tarjetaRam');
+sumaCarrito = carrito.push(productoElegido);
 
-do{
-eleccion = prompt('RAM:\n1: 16 GB\n2: 32 GB');
-}while(eleccion!="1" && eleccion!="2");
-let precioRAM = decision(eleccion, ram16, ram32);
+let totalCarrito = 0;
+carrito.forEach((producto)=>{
+    totalCarrito = totalCarrito + producto.precio
+});
 
-let total = precioProcesador + precioGrafica + precioRAM;
 
-alert("Felicidades " + nombreCliente + ", ya elegiste tus componentes:" +
+
+alert("Felicidades " + nombreCliente + ", tu pc esta lista, estas son sus caracteristicas:" +
     "\n" +
-    "\nProcesador: "+ precioProcesador + " USD" +
-    "\nGrafica: " + precioGrafica + " USD" +
-    "\nRAM: " + precioRAM + " USD" +
+    "\nProcesador: " + carrito[0].precio +  " USD" +
+    "\nGrafica: " + carrito[1].precio +   " USD" +
+    "\nRAM: " + carrito[2].precio +   " USD" +
     "\n" +
-    "\nTOTAL: " + total + " USD");
-
+    "\nTOTAL: " + totalCarrito + " USD");
