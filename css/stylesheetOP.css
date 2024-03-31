@@ -1,54 +1,266 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #071E3D;
+  background-color: #000f19;
 }
 
-h1 {
-  font-size: clamp(40px, 7vw, 100px);
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .landing {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+main .landing .textoLanding {
+  padding-left: 10%;
+}
+main .landing .textoLanding h1 {
+  font-size: clamp(40px, 5vw, 62px);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #ecfaff;
-  background-color: blueviolet;
+  line-height: 4rem;
+  min-width: 440px;
 }
-
-h2 {
-  font-size: clamp(24px, 5vw, 80px);
+main .landing .textoLanding h2 {
+  font-size: clamp(24px, 3vw, 32px);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #ecfaff;
 }
-
-header {
-  height: 10svh;
-  min-height: 100px;
-  max-height: 150px;
-  justify-content: space-between;
+main .landing .textoLanding .builderRedirectButton {
+  background-color: #df2935;
+  color: #EEEEEE;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  padding: 8px 32px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+main .landing .pcCarousel {
+  height: 100%;
+  object-fit: contain;
+  max-height: 90svh;
+}
+main .benefitsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+main .benefitsSection .benefitsTitle {
+  font-size: 42px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #0ea5e9;
+}
+main .benefitsSection .benefits {
   display: flex;
   flex-direction: row;
-  padding: 0px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
-header .logoAether {
-  width: 75px;
-  height: auto;
+main .benefitsSection .benefits .benefit {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: clamp(300px, 20%, 450px);
+  text-align: center;
+  border-width: 2px;
+  border-radius: 16px;
+  border-color: #7dd5fc;
+  padding: 2rem;
+}
+main .benefitsSection .benefits .benefit .icoBenefit {
+  max-height: 100px;
+  margin-bottom: 30px;
+}
+main .benefitsSection .benefits .benefit h2 {
+  font-size: clamp(20px, 2rem, 24px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #0ea5e9;
+}
+main .benefitsSection .benefits .benefit p {
+  font-size: clamp(16px, 1rem, 20px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #EEEEEE;
+}
+main .testimonialsSection {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+main .testimonialsSection .testimonialsTitle {
+  font-size: 42px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #0ea5e9;
+}
+main .testimonialsSection .testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+main .testimonialsSection .testimonials .testimonial {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: clamp(300px, 20%, 450px);
+  text-align: center;
+  padding: 2rem;
+}
+main .testimonialsSection .testimonials .testimonial .avatar {
+  max-height: 100px;
+  margin-bottom: 30px;
+}
+main .testimonialsSection .testimonials .testimonial h2 {
+  font-size: clamp(20px, 2rem, 24px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #0ea5e9;
+}
+main .testimonialsSection .testimonials .testimonial p {
+  font-size: clamp(16px, 1rem, 20px);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #EEEEEE;
+}
+main .builderSection {
+  margin: 10rem 0px;
+}
+main .builderSection .builderTitle {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+main .builderSection .builderTitle h2 {
+  font-size: clamp(40px, 5vw, 62px);
+  color: #0ea5e9;
+  font-weight: 700;
+}
+main .builderSection .builderTitle h3 {
+  font-size: 24px;
+  color: #EEEEEE;
+  font-weight: 700;
+}
+main .builderSection .builder {
+  background-color: #0ea5e9;
+  height: 800px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  gap: 30px;
+}
+main .builderSection .builder .components {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: clamp(200px, 30%, 400px);
+  gap: 10px;
+  height: 100%;
+}
+main .builderSection .builder .components li {
+  width: 100%;
+  background-color: #083549;
+  height: 100px;
+  color: #EEEEEE;
+  border-radius: 12px;
+  padding: 1rem;
+  font-weight: 700;
+}
+main .builderSection .builder .items {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: clamp(200px, 30%, 400px);
+  gap: 10px;
+}
+main .builderSection .builder .items li {
+  width: 100%;
+  background-color: #083549;
+  height: 100px;
+  color: #EEEEEE;
+  border-radius: 12px;
+  padding: 1rem;
+  font-weight: 700;
+}
+main .builderSection .builder .ilustration {
+  width: 40%;
+  background-color: #083549;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  height: 10svh;
+  max-height: 85px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border-bottom: solid #0ea5e9 2px;
+}
+header .anuncio {
+  height: 25px;
+  background-color: #7dd5fc;
+  display: flex;
+  justify-content: center;
+}
+header .anuncio p {
+  color: #083549;
+  height: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+header .nav {
+  max-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px 50px;
+  background-color: rgba(0, 15, 25, 0.6);
+}
+header .nav .logoAether {
+  height: 50%;
+  max-height: 40px;
   aspect-ratio: 1/1;
 }
-header nav {
+header .nav nav {
   display: flex;
   justify-content: end;
   gap: 20px;
   width: fit-content;
 }
-header nav a {
+header .nav nav a {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   color: #EEEEEE;
+  font-weight: 700;
   text-decoration: none;
-  text-transform: uppercase;
   padding: 50px 0px;
+  font-size: clamp(16px, 1rem, 20px);
 }
 
 /*# sourceMappingURL=stylesheetOP.css.map */

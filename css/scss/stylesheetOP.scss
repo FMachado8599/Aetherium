@@ -1,4 +1,10 @@
-@import "general.scss";
-@import "index.scss";
-@import "header";
-@import "footer";
+@import '_general.scss';
+@import '_variables.scss';
+
+
+
+
+
+@import '_index.scss';
+@import '_header';
+@import '_footer';
