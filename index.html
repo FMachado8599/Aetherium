@@ -136,20 +136,26 @@
         </div>
         <div class="builder">
           <ul class="components">
-            <li>CPU</li>
-            <li>GPU</li>
-            <li>Motherboard</li>
-            <li>RAM</li>
-            <li>PSU</li>
-            <li>Refrigeration</li>
-            <li>SSD</li>
-            <li>Case</li>
-            <li>Fans</li>
-            <li>Design</li>
+            <li class="componentType" onclick="setCategoria('cpu')">CPU</li>
+            <li class="componentType" onclick="setCategoria('gpu')">GPU</li>
+            <li class="componentType" onclick="setCategoria('motherboard')">
+              Motherboard
+            </li>
+            <li class="componentType" onclick="setCategoria('ram')">RAM</li>
+            <li class="componentType" onclick="setCategoria('psu')">PSU</li>
+            <li class="componentType" onclick="setCategoria('cooler')">
+              Refrigeration
+            </li>
+            <li class="componentType" onclick="setCategoria('ssd')">SSD</li>
+            <li class="componentType" onclick="setCategoria('case')">Case</li>
+            <li class="componentType" onclick="setCategoria('fan')">Fans</li>
+            <li class="componentType" onclick="setCategoria('design')">
+              Design
+            </li>
           </ul>
-          <ul class="items">
-            <li>Expensive</li>
-            <li>Cheap</li>
+          <ul id="objetos" class="items">
+            <li class="item">Example 1</li>
+            <li class="item">Example 2</li>
           </ul>
           <ul class="ilustration">
             <img
@@ -164,6 +170,7 @@
     <footer>
       <img src="./multimedia/images/" alt="" />
     </footer>
-    <script src="./js/script.jsPARA"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/prueba.js"></script>
   </body>
 </html>

@@ -71,3 +71,4 @@ alert("Felicidades " + nombreCliente + ", tu pc esta lista, estas son sus caract
     "\nRAM: " + carrito[2].precio +   " USD" +
     "\n" +
     "\nTOTAL: " + totalCarrito + " USD");
+
