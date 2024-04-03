@@ -8,6 +8,20 @@ body {
   background-color: #000f19;
 }
 
+.activeItem {
+  outline: 3px solid white;
+}
+
+.buttonGral {
+  background-color: #df2935;
+  color: #EEEEEE;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  padding: 8px 32px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -200,6 +214,7 @@ main .builderSection .builder .items li {
   border-radius: 12px;
   padding: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 main .builderSection .builder .ilustration {
   width: 40%;
@@ -232,7 +247,7 @@ header .anuncio p {
   font-weight: 700;
 }
 header .nav {
-  max-height: 60px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;

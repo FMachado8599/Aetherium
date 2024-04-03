@@ -136,27 +136,50 @@
         </div>
         <div class="builder">
           <ul class="components">
-            <li class="componentType" onclick="setCategoria('cpu')">CPU</li>
-            <li class="componentType" onclick="setCategoria('gpu')">GPU</li>
-            <li class="componentType" onclick="setCategoria('motherboard')">
+            <li id="cpu" class="componentType" onclick="setCategoria('cpu')">
+              CPU
+            </li>
+            <li id="gpu" class="componentType" onclick="setCategoria('gpu')">
+              GPU
+            </li>
+            <li
+              id="motherboard"
+              class="componentType"
+              onclick="setCategoria('motherboard')"
+            >
               Motherboard
             </li>
-            <li class="componentType" onclick="setCategoria('ram')">RAM</li>
-            <li class="componentType" onclick="setCategoria('psu')">PSU</li>
-            <li class="componentType" onclick="setCategoria('cooler')">
+            <li id="ram" class="componentType" onclick="setCategoria('ram')">
+              RAM
+            </li>
+            <li id="psu" class="componentType" onclick="setCategoria('psu')">
+              PSU
+            </li>
+            <li
+              id="cooler"
+              class="componentType"
+              onclick="setCategoria('cooler')"
+            >
               Refrigeration
             </li>
-            <li class="componentType" onclick="setCategoria('ssd')">SSD</li>
-            <li class="componentType" onclick="setCategoria('case')">Case</li>
-            <li class="componentType" onclick="setCategoria('fan')">Fans</li>
-            <li class="componentType" onclick="setCategoria('design')">
+            <li id="ssd" class="componentType" onclick="setCategoria('ssd')">
+              SSD
+            </li>
+            <li id="case" class="componentType" onclick="setCategoria('case')">
+              Case
+            </li>
+            <li id="fan" class="componentType" onclick="setCategoria('fan')">
+              Fans
+            </li>
+            <li
+              id="design"
+              class="componentType"
+              onclick="setCategoria('design')"
+            >
               Design
             </li>
           </ul>
-          <ul id="objetos" class="items">
-            <li class="item">Example 1</li>
-            <li class="item">Example 2</li>
-          </ul>
+          <ul id="objetos" class="items"></ul>
           <ul class="ilustration">
             <img
               class="componentsIlustration"
@@ -165,6 +188,14 @@
             />
           </ul>
         </div>
+        <div
+          id="totalBuilder"
+          class="totalBuilder"
+          style="color: #ffffff; display: none"
+        >
+          Total: 0
+        </div>
+        <button class="buttonGral" onclick="saveBuild()">Guardar</button>
       </section>
     </main>
     <footer>
