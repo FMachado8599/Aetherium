@@ -13,6 +13,11 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./css/stylesheetOP.css" />
     <title>Aetherium - Home</title>
   </head>
@@ -199,13 +204,18 @@
           <button class="buttonGral" onclick="saveBuild()">Guardar</button>
           <button class="buttonGral" onclick="removeBuild()">Vaciar</button>
         </div>
-        <button class="buttonGral" onclick="removeBuild()">Comprar</button>
+        <button class="buttonGral" onclick="finishedBuild()">Comprar</button>
       </section>
     </main>
     <footer>
       <img src="./multimedia/images/" alt="" />
     </footer>
     <!-- <script src="./js/script.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/prueba.js"></script>
   </body>
 </html>

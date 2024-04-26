@@ -1,4 +1,3 @@
-// document.querySelectorAll()
 let categoriaSeleccionada;
 
 let productos = [];
@@ -70,9 +69,7 @@ function setItem(itemInput){
 };
 
 function setCategoria(catInput){
-    if(categoriaSeleccionada){
-        document.querySelector("#" + categoriaSeleccionada).classList.remove("activeItem");
-    }
+    categoriaSeleccionada && document.querySelector("#" + categoriaSeleccionada).classList.remove("activeItem")
 
     categoriaSeleccionada = catInput;
     document.querySelector('#' + catInput).classList.add("activeItem");
@@ -101,3 +98,23 @@ function removeBuild(){
     desmarcarActive();
     calcularSuma()
 };
+
+function finishedBuild(){
+    removeBuild();
+    Toastify({
+        text: "Compra realizada",
+        duration: 3000,
+        close: true,
+        stopOnFocus: true,
+        gravity: "bottom",
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          }
+    }).showToast();
+    Swal.fire({
+        title: 'Bought',
+        text: 'Congratulations!',
+        icon: 'success',
+        confirmButtonText: 'Cool',
+      })
+}
