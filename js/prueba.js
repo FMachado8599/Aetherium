@@ -1,7 +1,7 @@
 let categoriaSeleccionada;
 
 let productos = [];
-fetch("../json/productos.json")
+fetch("./json/productos.json")
     .then( (resp) => resp.json() )
     .then( (data) => {
         data.forEach((post) => {
