@@ -171,7 +171,7 @@ main .builderSection .builderTitle h3 {
 }
 main .builderSection .builder {
   background-color: #0ea5e9;
-  height: 800px;
+  height: fit-content;
   border-radius: 24px;
   display: flex;
   flex-direction: row;
@@ -187,7 +187,6 @@ main .builderSection .builder .components {
   flex-direction: column;
   width: clamp(200px, 30%, 400px);
   gap: 10px;
-  height: 100%;
 }
 main .builderSection .builder .components li {
   width: 100%;
@@ -265,6 +264,7 @@ header .nav nav {
   justify-content: end;
   gap: 20px;
   width: fit-content;
+  height: inherit;
 }
 header .nav nav a {
   display: flex;
@@ -273,8 +273,8 @@ header .nav nav a {
   align-items: center;
   color: #EEEEEE;
   font-weight: 700;
+  height: inherit;
   text-decoration: none;
-  padding: 50px 0px;
   font-size: clamp(16px, 1rem, 20px);
 }
 

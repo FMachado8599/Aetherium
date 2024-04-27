@@ -36,6 +36,7 @@ header{
             justify-content: end;
             gap: 20px;
             width: fit-content;
+            height: inherit;
             & a{
                 display: flex;
                 text-align: center;
@@ -43,8 +44,8 @@ header{
                 align-items: center;
                 color: #EEEEEE;
                 font-weight: 700;
+                height: inherit;
                 text-decoration: none;
-                padding: 50px 0px;
                 font-size: clamp(16px, 1rem, 20px);
             }
         }

@@ -148,7 +148,7 @@ main{
         }
         & .builder{
             background-color: $blue500;
-            height: 800px;
+            height: fit-content;
             border-radius: 24px;
             display: flex;
             flex-direction: row;
@@ -163,7 +163,6 @@ main{
                 flex-direction: column;
                 width: clamp(200px, 30%, 400px);
                 gap: 10px;
-                height: 100%;
                 & li{
                     width: 100%;
                     background-color: $blue950;
