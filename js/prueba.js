@@ -49,6 +49,15 @@ function marcarActive(){
 
 };
 
+function capitalize(str) {
+    return str
+      .trim()
+      .toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+  }
+
 marcarActive();
 
 function setItem(itemInput){
@@ -61,11 +70,14 @@ function setItem(itemInput){
     }
     finalDecision.push(productSort);
 
-    calcularSuma()
+    calcularSuma();
 
     marcarActive();
+    
 
-    console.log(finalDecision);
+    const htmlCategoria = document.getElementById(categoriaSeleccionada);
+    htmlCategoria.childNodes[3].innerHTML = capitalize(itemInput);
+
 };
 
 function setCategoria(catInput){
@@ -97,6 +109,12 @@ function removeBuild(){
     localStorage.removeItem("carrito")
     desmarcarActive();
     calcularSuma()
+
+    let htmlLiCategoria = document.getElementsByClassName("componentType");   
+    for (let i = 0; i < htmlLiCategoria.length; i++){
+        htmlLiCategoria[i].childNodes[3].innerHTML = "";
+    }
+
 };
 
 function finishedBuild(){
